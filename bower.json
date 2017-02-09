@@ -1,0 +1,30 @@
+{
+  "name": "css-grid",
+  "homepage": "https://github.com/cssberries/grid",
+  "authors": [
+    "Yevgeniy Belov"
+  ],
+  "description": "",
+  "main": "main.css",
+  "keywords": [
+    "css",
+    "itcss",
+    "oocss",
+    "grid",
+    "bem"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materials-backgrounds": "cssberries-materials-backgrounds#latest",
+    "helpers": "cssberries-helpers#latest",
+    "dimensions": "cssberries-dimensions#latest",
+    "objects-flexbox": "cssberries-objects-flexbox#latest"
+  }
+}

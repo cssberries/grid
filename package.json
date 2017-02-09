@@ -1,0 +1,26 @@
+{
+  "name": "grid",
+  "version": "0.0.1",
+  "description": "CSS grid",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
+    "gulp-copy": "^1.0.0",
+    "gulp-flatten": "^0.3.1",
+    "gulp-less": "^3.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cssberries/grid.git"
+  },
+  "author": "Yevgeniy Belov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cssberries/grid/issues"
+  }
+}

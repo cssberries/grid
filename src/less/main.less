@@ -1,0 +1,44 @@
+@import "../../bower_components/spacers/main";
+@import "../../bower_components/dimensions/main";
+@import "../../bower_components/helpers/src/helpers";
+@import "../../bower_components/materials-backgrounds/main";
+
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.height--100{
+    height: 100%;
+}
+.grid {
+    display: grid;
+    grid-template-rows: 50px auto 50px;
+    grid-template-columns: 300px auto 300px;
+}
+.grid__item--span-full{
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+.grid-gaps(@g) {
+    .grid--gap-@{g} {
+        @gap: "gap--@{g}";
+        grid-gap: @@gap;
+    }
+}
+.grid-gaps(xxs);
+.grid-gaps(xs);
+.grid-gaps(sm);
+.grid-gaps(md);
+.grid-gaps(lg);
+.grid-gaps(xl);
+.grid-gaps(xxl);
+
+.grid__item {
+    .bg--primary;
+    .padding--md;
+    font-size: 30px;
+    font-family: monospace;
+    color: white;
+}
