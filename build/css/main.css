@@ -989,17 +989,20 @@ body {
   margin: 0;
   height: 100%;
 }
-.height--100 {
-  height: 100%;
-}
 .grid {
   display: grid;
   grid-template-rows: 50px auto 50px;
-  grid-template-columns: 300px auto 300px;
+  grid-template-columns: auto 10px 1fr auto;
 }
 .grid__item--span-full {
   grid-column-start: 1;
   grid-column-end: -1;
+}
+.grid__resizer {
+  background-color: #820082;
+}
+.grid__resizer--vertical {
+  cursor: col-resize;
 }
 .grid--gap-xxs {
   grid-gap: 3px;

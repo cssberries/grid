@@ -3,6 +3,7 @@ var browserSync = require('browser-sync').create();
 var less        = require('gulp-less');
 var gulpCopy    = require('gulp-copy');
 var flatten     = require('gulp-flatten');
+var plumber     = require('gulp-plumber');
 
 var sourceFiles = [ 'docs/index.html' ];
 var destination = 'build';
@@ -10,7 +11,12 @@ var destination = 'build';
 // Compile less into CSS & auto-inject into browsers
 gulp.task('less', function() {
 	return gulp.src("src/less/main.less")
+	.pipe(plumber(function(error){
+        console.log("Error happend!", error.message);
+        this.emit('end');
+    }))
 	.pipe(less())
+	.pipe(plumber.stop())
 	.pipe(gulp.dest("build/css"))
 	.pipe(browserSync.stream());
 });
