@@ -5,12 +5,17 @@
     <meta charset="utf-8">
     <title>CSS Grid</title>
     <link rel="stylesheet" href="css/main.css"> </head>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="scripts.js"></script>
 
 <body>
     <div class="grid grid--gap-xxs height--100">
         <div class="grid__item grid__item--span-full">Header</div>
-        <div id="sidebar" class="grid__item overflow--auto width--xxl">Left</div>
-        <div class="grid__resizer grid__resizer--vertical"></div>
+        <div id="left" class="grid__item overflow--auto width--xxl">Left</div>
+        <div id="handle" class="grid__resizer grid__resizer--vertical flex justify-content--center">
+            <div id="handleInner" class="*width--micro--xxs"></div>
+        </div>
         <div class="grid__item">Content</div>
         <div class="grid__item width--xxl">Right</div>
         <div class="grid__item grid__item--span-full">Footer</div>

@@ -5,7 +5,10 @@ var gulpCopy    = require('gulp-copy');
 var flatten     = require('gulp-flatten');
 var plumber     = require('gulp-plumber');
 
-var sourceFiles = [ 'docs/index.html' ];
+var sourceFiles = [
+	'docs/index.html',
+	'docs/**/*.js'
+];
 var destination = 'build';
 
 // Compile less into CSS & auto-inject into browsers
@@ -40,7 +43,7 @@ gulp.task('serve', ['less'], function() {
     });
 
     gulp.watch("src/less/*.less", ['less']);
-    gulp.watch("docs/*.html", ['copy']);
+    gulp.watch(sourceFiles, ['copy']);
     // gulp.watch("docs/*.html").on('change', browserSync.reload);
 });
 
